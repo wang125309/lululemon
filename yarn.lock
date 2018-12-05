@@ -3128,6 +3128,10 @@ multipipe@^0.1.0, multipipe@^0.1.2:
   dependencies:
     duplexer2 "0.0.2"
 
+n-zepto@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/n-zepto/-/n-zepto-1.2.0.tgz#8ad522bf30fa48ac37013aee0d1354fcd8f585a8"
+
 nanomatch@^1.2.9:
   version "1.2.13"
   resolved "https://registry.yarnpkg.com/nanomatch/-/nanomatch-1.2.13.tgz#b87a8aa4fc0de8fe6be88895b38983ff265bd119"

@@ -7743,9 +7743,17 @@ if (typeof Swiper.use === 'undefined') {
 
 Swiper.use(components);
 
-window.onload = function () {
-    let sw = new Swiper('.swiper-container', {
-        autoplay: true
+window.onload = () => {
+    new Swiper('.swiper-container', {
+        direction:'vertical',
+        speed:500,
+        onInit () {
+            clearAnimation(firstShow);
+        },
+        onSlideChangeEnd(swiper) {
+            if (swiper.activeIndex === 0) {
+
+            }
+        }
     });
-    console.log(sw);
 };

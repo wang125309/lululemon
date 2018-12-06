@@ -1,6 +1,6 @@
 body {
   .swiper-container {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 * {
@@ -37,7 +37,29 @@ image-fit(image) {
   background-image:url('/static/img/'+image);
   background-repeat:no-repeat;
   background-position:top center;
-  background-size:100% 100%;
+  background-size:contain;
+}
+@keyframes logo {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    tarnsform: scale(1);
+  }
+}
+@keyframes activeButtonText {
+  0% {
+    text-shadow: 0 0 0 #ffffff;
+  }
+  50% {
+    text-shadow: 0 0 5px #ffffff;
+  }
+  100% {
+    text-shadow: 0 0 0 #ffffff;
+  }
 }
 body {
   position: absolute;
@@ -45,7 +67,7 @@ body {
   top: 0;
   width: 100%;
   height: 100%;
-  font-size: 14px;
+  font-size: 12px;
   color: #333;
   font-family: '微软雅黑';
   background-color: #fff;
@@ -65,6 +87,10 @@ body {
     height: 100%;
     overflow: hidden;
   }
+  .text-details {
+    color: #fff;
+    text-shadow: 1px 3px 3px rgba(0, 0, 0, 0.5);
+  }
   .swiper-slide {
     position: relative;
     width: 100%;
@@ -78,9 +104,93 @@ body {
         top: 0;
         left: 0;
         width: 100%;
-        height: 0.3rem;
-        image-wauto('page1-text1.png');
+        height: 0.7rem;
+        text-align: center;
+        image-wauto('page1-text1-bg.png');
         z-index: 2;
+        padding-top: 0.05rem;
+      }
+      .page1-logo {
+        position: absolute;
+        top: 0.7rem;
+        left: 50%;
+        width: 0.15rem;
+        transform: translateX(-50%);
+        text-align: center;
+        z-index: 2;
+        .page1-logo-bg {
+          position: absolute;
+          width: 0.15rem;
+          height: 0.15rem;
+          border-radius: 100%;
+          background-color: #cd1733;
+          animation: logo 1s ease-in-out infinite;
+        }
+        .logo {
+          position: relative;
+          width: 0.15rem;
+          height: 0.15rem;
+          image-fit('logo.png');
+        }
+        .logo-text {
+          margin: 10px 0;
+          color: #cd1733;
+          font-weight: 500;
+        }
+      }
+      .logo-text-desc {
+        position: absolute;
+        z-index: 2;
+        top: 0.95rem;
+        width: 100%;
+        color: #cd1733;
+        font-size: 0.1rem;
+        font-weight: 500;
+        text-align: center;
+      }
+      .join-button {
+        position: absolute;
+        top: 1.1rem;
+        font-weight: 500;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+        background-color: #cd1733;
+        color: #fff;
+        text-align: center;
+        padding: 5px 10px;
+        &:active {
+          background-color: #cd1733 * 0.85;
+        }
+      }
+      .page1-text-bottom {
+        position: absolute;
+        top: 1.25rem;
+        width: 100%;
+        text-align: center;
+        z-index: 2;
+        &-text {
+          margin-bottom: 10px;
+        }
+      }
+      .page1-button-area {
+        position: absolute;
+        top: 1.55rem;
+        width: 100%;
+        z-index: 2;
+        .active-button {
+          width: 0.4rem;
+          text-align: center;
+          margin: 10px auto;
+          padding: 8px 30px;
+          background-color: #cd1733;
+          color: #fff;
+          display: block;
+          animation: activeButtonText 300ms infinite;
+          &:active {
+            background-color: #cd1733 * 0.85;
+          }
+        }
       }
     }
   }

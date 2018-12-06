@@ -6,6 +6,7 @@ var uglify = require('gulp-uglify');
 var base64 = require('gulp-base64');
 var css_minify = require('gulp-minify-css');
 var browserify = require('gulp-browserify');
+var watch = require('gulp-watch');
 
 gulp.task('stylus',function(){
     gulp.src('./static/css-modify/*.styl')
@@ -24,3 +25,7 @@ gulp.task('js',function(){
         .pipe(uglify())
         .pipe(gulp.dest('./static/js'));
 });
+
+gulp.task('auto', () => {
+     gulp.watch('./static/css-modify/**', ['stylus']);
+})

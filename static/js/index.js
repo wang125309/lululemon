@@ -7748,12 +7748,9 @@ window.onload = () => {
         direction:'vertical',
         speed:500,
         onInit () {
-            clearAnimation(firstShow);
         },
         onSlideChangeEnd(swiper) {
-            if (swiper.activeIndex === 0) {
-
-            }
+            if (swiper.activeIndex === 0) ;
         }
     });
 };

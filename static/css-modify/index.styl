@@ -1,7 +1,6 @@
+@import '../../node_modules/normalize.css/normalize.css'
 body {
-  .swiper-container {
-    font-size: 16px;
-  }
+  font-size: 16px;
 }
 * {
   -webkit-user-select: none;
@@ -10,6 +9,9 @@ body {
   -khtml-user-select: none;
   user-select: none;
   -webkit-touch-callout:none;
+  &:active {
+    outline: none;
+  }
 }
 background-img(image) {
   position:relative;
@@ -61,6 +63,30 @@ image-fit(image) {
     text-shadow: 0 0 0 #ffffff;
   }
 }
+
+@keyframes page2-figure1 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes page2-figure2 {
+  0% {
+      opacity: 1;
+  }
+  50% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
 body {
   position: absolute;
   left: 0;
@@ -86,6 +112,126 @@ body {
     width: 100%;
     height: 100%;
     overflow: hidden;
+    visibility: visible;
+    opacity: 0;
+    .page2 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      width: 100%;
+      height: 100%;
+      color: #333;
+      .background {
+      }
+      .page2-interactive1 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 0.7rem;
+        image-wauto('page2-interactive.png');
+      }
+      .page2-text-top {
+        position: relative;
+        z-index: 2;
+        margin-left: 0.22rem;
+        margin-top: 0.05rem;
+      }
+      .page2-text-title {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 2;
+      }
+      .page2-text-desc {
+        line-height: 1.8;
+      }
+      .page2-figure {
+        position: absolute;
+        top: 0.22rem;
+        right: 0;
+        width: 0.5rem;
+        height: 0.5rem;
+        z-index: 1;
+        .page2-figure1 {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          image-wauto('page2-figure1.png');
+          animation: page2-figure1 5s 0s ease-in-out both infinite;
+        }
+        .page2-figure2 {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          image-wauto('page2-figure2.png');
+          animation: page2-figure2 5s 0s ease-in-out both infinite;
+        }
+      }
+      .page2-logo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 0.15rem;
+        transform: translateX(-50%) translateY(-50%);
+        text-align: center;
+        z-index: 2;
+        .page2-logo-bg {
+          position: absolute;
+          width: 0.15rem;
+          height: 0.15rem;
+          border-radius: 100%;
+          background-color: #cd1733;
+          animation: logo 1s ease-in-out infinite;
+        }
+        .logo {
+          position: relative;
+          width: 0.15rem;
+          height: 0.15rem;
+          image-fit('logo.png');
+        }
+      }
+      .page2-bg {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        left: 0;
+        height: 0.7rem;
+        image-wauto('page2-bg.png');
+        background-position: bottom center;
+      }
+      .page2-people1 {
+        position: absolute;
+        bottom: 0;
+        z-index: 2;
+        width: 100%;
+        height: 0.7rem;
+        image-wauto('page2-people1.png');
+        background-position: bottom center;
+        animation: page2-figure1 5s 0s ease-in-out both infinite;
+      }
+      .page2-people2 {
+        position: absolute;
+        bottom: 0;
+        z-index: 2;
+        width: 100%;
+        height: 0.7rem;
+        image-wauto('page2-people2.png');
+        background-position: bottom center;
+        animation: page2-figure2 5s 0s ease-in-out both infinite;
+      }
+    }
+  }
+  .swiper1 {
+    &.show {
+      visibility: visible;
+      opacity: 1;
+      transition: opacity 300ms ease-in-out, display 300ms ease-in-out;
+    }
   }
   .text-details {
     color: #fff;
@@ -95,103 +241,115 @@ body {
     position: relative;
     width: 100%;
     height: 100%;
-    &.page1 {
-      .background {
-        background-img('page1-bg.png');
-      }
-      .text1 {
+  }
+  .welcome {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    &.hide {
+      visibility: hidden;
+      opacity: 0;
+      transition: visibility 300ms ease-in-out, opacity 300ms ease-in-out;
+    }
+    .background {
+      background-img('page1-bg.png');
+    }
+    .text1 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 0.7rem;
+      text-align: center;
+      image-wauto('page1-text1-bg.png');
+      z-index: 2;
+      padding-top: 0.05rem;
+    }
+    .page1-logo {
+      position: absolute;
+      top: 0.7rem;
+      left: 50%;
+      width: 0.15rem;
+      transform: translateX(-50%);
+      text-align: center;
+      z-index: 2;
+      .page1-logo-bg {
         position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 0.7rem;
-        text-align: center;
-        image-wauto('page1-text1-bg.png');
-        z-index: 2;
-        padding-top: 0.05rem;
-      }
-      .page1-logo {
-        position: absolute;
-        top: 0.7rem;
-        left: 50%;
         width: 0.15rem;
-        transform: translateX(-50%);
-        text-align: center;
-        z-index: 2;
-        .page1-logo-bg {
-          position: absolute;
-          width: 0.15rem;
-          height: 0.15rem;
-          border-radius: 100%;
-          background-color: #cd1733;
-          //animation: logo 1s ease-in-out infinite;
-        }
-        .logo {
-          position: relative;
-          width: 0.15rem;
-          height: 0.15rem;
-          image-fit('logo.png');
-        }
-        .logo-text {
-          margin: 10px 0;
-          color: #cd1733;
-          font-weight: 500;
-        }
+        height: 0.15rem;
+        border-radius: 100%;
+        background-color: #cd1733;
+        //animation: logo 1s ease-in-out infinite;
       }
-      .logo-text-desc {
-        position: absolute;
-        z-index: 2;
-        top: 0.95rem;
-        width: 100%;
+      .logo {
+        position: relative;
+        width: 0.15rem;
+        height: 0.15rem;
+        image-fit('logo.png');
+      }
+      .logo-text {
+        margin: 10px 0;
         color: #cd1733;
-        font-size: 0.1rem;
         font-weight: 500;
-        text-align: center;
       }
-      .join-button {
-        position: absolute;
-        top: 1.1rem;
-        font-weight: 500;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 2;
+    }
+    .logo-text-desc {
+      position: absolute;
+      z-index: 2;
+      top: 0.95rem;
+      width: 100%;
+      color: #cd1733;
+      font-size: 0.1rem;
+      font-weight: 500;
+      text-align: center;
+    }
+    .join-button {
+      position: absolute;
+      top: 1.1rem;
+      font-weight: 500;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      background-color: #cd1733;
+      color: #fff;
+      text-align: center;
+      padding: 5px 10px;
+      &:active {
+        background-color: #cd1733 * 0.85;
+      }
+    }
+    .page1-text-bottom {
+      position: absolute;
+      top: 1.25rem;
+      width: 100%;
+      text-align: center;
+      z-index: 2;
+      &-text {
+        margin-bottom: 10px;
+      }
+    }
+    .page1-button-area {
+      position: absolute;
+      top: 1.55rem;
+      width: 100%;
+      z-index: 2;
+      .active-button {
+        width: 0.4rem;
+        text-align: center;
+        margin: 10px auto;
+        padding: 8px 30px;
         background-color: #cd1733;
         color: #fff;
-        text-align: center;
-        padding: 5px 10px;
+        display: block;
+        animation: activeButtonText 300ms infinite;
         &:active {
           background-color: #cd1733 * 0.85;
-        }
-      }
-      .page1-text-bottom {
-        position: absolute;
-        top: 1.25rem;
-        width: 100%;
-        text-align: center;
-        z-index: 2;
-        &-text {
-          margin-bottom: 10px;
-        }
-      }
-      .page1-button-area {
-        position: absolute;
-        top: 1.55rem;
-        width: 100%;
-        z-index: 2;
-        .active-button {
-          width: 0.4rem;
-          text-align: center;
-          margin: 10px auto;
-          padding: 8px 30px;
-          background-color: #cd1733;
-          color: #fff;
-          display: block;
-          animation: activeButtonText 300ms infinite;
-          &:active {
-            background-color: #cd1733 * 0.85;
-          }
         }
       }
     }
   }
 }
+

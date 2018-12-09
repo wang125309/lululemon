@@ -16,6 +16,7 @@
     "gulp-stylus": "^2.7.0",
     "gulp-uglify": "^3.0.1",
     "gulp-watch": "^5.0.1",
+    "iosselect": "^1.1.5",
     "n-zepto": "^1.2.0",
     "normalize.css": "^8.0.1",
     "rollup": "^0.67.4",

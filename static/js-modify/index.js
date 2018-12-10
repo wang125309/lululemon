@@ -33,8 +33,12 @@ const swiperShow = () => {
 
 const pageHide = (page) => {
     let $page = $(page)
-    console.log(page)
     return $page.hasClass('show') && $page.removeClass('show')
+}
+
+const pageShow = (page) => {
+    let $page = $(page)
+    return !$page.hasClass('show') && $page.addClass('show')
 }
 
 const pagePopupShow = (page) => {
@@ -118,6 +122,11 @@ const eventListeners = () => {
         () => {
             sexSelect()
         })
+    $('.submit').on('click', () => {
+        pageHide('.input-area')
+        pageHide('.submit-button-area')
+        pageShow('.thanks')
+    })
 }
 
 window.onload = () => {

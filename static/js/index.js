@@ -8231,9 +8231,7 @@ Swiper.use(components);
 	            return;
 	        }
 
-	        if ( this.options.preventDefault ) {    // increases performance on Android? TODO: check!
-	            // e.preventDefault();
-	        }
+	        if ( this.options.preventDefault ) ;
 
 	        var point       = e.touches ? e.touches[0] : e,
 	            deltaX      = point.pageX - this.pointX,
@@ -10011,8 +10009,12 @@ const swiperShow = () => {
 
 const pageHide = (page) => {
     let $page = $(page);
-    console.log(page);
     return $page.hasClass('show') && $page.removeClass('show')
+};
+
+const pageShow = (page) => {
+    let $page = $(page);
+    return !$page.hasClass('show') && $page.addClass('show')
 };
 
 const pagePopupShow = (page) => {
@@ -10096,6 +10098,11 @@ const eventListeners = () => {
         () => {
             sexSelect();
         });
+    $('.submit').on('click', () => {
+        pageHide('.input-area');
+        pageHide('.submit-button-area');
+        pageShow('.thanks');
+    });
 };
 
 window.onload = () => {
@@ -10106,8 +10113,7 @@ window.onload = () => {
         onInit () {
         },
         onSlideChangeEnd(swiper) {
-            if (swiper.activeIndex === 0) {
-            }
+            if (swiper.activeIndex === 0) ;
         }
     });
 };

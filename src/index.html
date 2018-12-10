@@ -6,7 +6,7 @@
         <link href="/static/css/index.css" rel="stylesheet" type="text/css"/>
         <script language="javascript" src="https://cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script>
         <script language="javascript" src="/static/js/index.js"></script>
-        <meta name="viewport" content="width=device-width,user-scalable=no"/>
+        <meta name="viewport" content="width=device-width, user-scalable=no"/>
         <script>
             !(function() {
                 let rem;
@@ -33,7 +33,10 @@
                 <div class="logo-text">携手</div>
             </div>
             <div class="logo-text-desc">lululemon</div>
-            <div class="join-button">·加入【xxx】活动·</div>
+            <div class="join-button">·加入
+                <b>解锁灵感-YOGA.HEART.BEATS</b>
+                活动·
+            </div>
             <div class="page1-text-bottom">
                 <div class="page1-text-bottom-text">唤醒沉睡自我</div>
                 <div class="page1-text-bottom-text">感受崭新变化</div>
@@ -186,83 +189,84 @@
                 </div>
                 <div class="swiper-slide collector">
                     <div class="logo"></div>
-                    <div class="background"></div>
-                    <div class="input-area show">
-                        <div class="input-wrapper">
-                            <div class="label-area">
-                                姓名
+                    <div class="background">
+                        <div class="input-area show">
+                            <div class="input-wrapper">
+                                <div class="label-area">
+                                    姓名
+                                </div>
+                                <div class="input-area-input">
+                                    <input type="text" id="name" placeholder="请输入您的姓名"/>
+                                </div>
                             </div>
-                            <div class="input-area-input">
-                                <input type="text" id="name" placeholder="请输入您的姓名"/>
+                            <div class="input-wrapper">
+                                <div class="label-area">
+                                    性别
+                                </div>
+                                <div class="input-area-input">
+                                    <div id="sex">
+                                        <span class="selector" id="sexSpan">
+                                            男
+                                        </span>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="input-wrapper">
-                            <div class="label-area">
-                                性别
+                            <div class="input-wrapper">
+                                <div class="label-area">
+                                    生日
+                                </div>
+                                <div class="input-area-input">
+                                    <div id="selectDate">
+                                        <span class="selector" id="year">
+                                        </span>
+                                        <span class="selector" id="month">
+                                        </span>
+                                        <span class="selector" id="date">
+                                        </span>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="input-area-input">
-                                <div id="sex">
-                                    <span class="selector" id="sexSpan">
-                                        男
-                                    </span>
+                            <div class="input-wrapper">
+                                <div class="label-area">
+                                    所在城市（省市）
+                                </div>
+                                <div id="province" class="input-area-input">
+                                    <div id="show_contact">
+                                        <span class="selector" id="provinceSpan">北京市</span>
+                                        <span class="selector" id="citySpan">北京市</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="input-wrapper">
+                                <div class="label-area">
+                                    手机号
+                                </div>
+                                <div class="input-area-input">
+                                    <input type="number" id="mobile" placeholder="请输入您的手机号"/>
+                                </div>
+                            </div>
+                            <div class="input-wrapper">
+                                <div class="label-area">
+                                    邮箱地址（选填）
+                                </div>
+                                <div class="input-area-input">
+                                    <input type="text" id="email" placeholder="请输入您的邮箱地址"/>
                                 </div>
                             </div>
                         </div>
-                        <div class="input-wrapper">
-                            <div class="label-area">
-                                生日
-                            </div>
-                            <div class="input-area-input">
-                                <div id="selectDate">
-                                    <span class="selector" id="year">
-                                    </span>
-                                    <span class="selector" id="month">
-                                    </span>
-                                    <span class="selector" id="date">
-                                    </span>
-                                </div>
-                            </div>
+                        <div id="error-message"></div>
+                        <div class="submit-button-area show button-area">
+                            <button class="submit">提交</button>
                         </div>
-                        <div class="input-wrapper">
-                            <div class="label-area">
-                                所在城市（省市）
+                        <div class="thanks">
+                            <div class="thanks-message">
+                                <div class="thanks-message-line">感谢您的参与，</div>
+                                <div class="thanks-message-line">我们已经收到了您的报名申请，</div>
+                                <div class="thanks-message-line">结果将随后以手机短信方式通知</div>
                             </div>
-                            <div id="province" class="input-area-input">
-                                <div id="show_contact">
-                                    <span class="selector" id="provinceSpan">北京市</span>
-                                    <span class="selector" id="citySpan">北京市</span>
-                                </div>
+                            <div class="thanks-button-area">
+                                <button class="focus-button">关注lululemon</button>
                             </div>
-                        </div>
-                        <div class="input-wrapper">
-                            <div class="label-area">
-                                手机号
-                            </div>
-                            <div class="input-area-input">
-                                <input type="text" id="mobile" placeholder="请输入您的手机号"/>
-                            </div>
-                        </div>
-                        <div class="input-wrapper">
-                            <div class="label-area">
-                                邮箱地址（选填）
-                            </div>
-                            <div class="input-area-input">
-                                <input type="text" id="email" placeholder="请输入您的邮箱地址"/>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="error-message"></div>
-                    <div class="submit-button-area show button-area">
-                        <button class="submit">提交</button>
-                    </div>
-                    <div class="thanks">
-                        <div class="thanks-message">
-                            <div class="thanks-message-line">感谢您的参与，</div>
-                            <div class="thanks-message-line">我们已经收到了您的报名申请，</div>
-                            <div class="thanks-message-line">结果将随后以手机短信方式通知</div>
-                        </div>
-                        <div class="thanks-button-area">
-                            <button class="focus-button">关注lululemon</button>
                         </div>
                     </div>
                 </div>

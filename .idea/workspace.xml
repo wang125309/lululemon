@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af6529ad-4d89-4ec3-8cb9-aa3497c7ca55" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/css-modify/index.styl" beforeDir="false" afterPath="$PROJECT_DIR$/static/css-modify/index.styl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/js-modify/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js-modify/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/date.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/date.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,16 +26,17 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="1254" />
-          <entry key="js" value="2206" />
-          <entry key="styl" value="4510" />
+          <entry key="html" value="1304" />
+          <entry key="js" value="2861" />
+          <entry key="styl" value="5038" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="1254" />
-          <entry key="JavaScript" value="2206" />
-          <entry key="Stylus" value="4510" />
+          <entry key="HTML" value="1301" />
+          <entry key="JavaScript" value="2861" />
+          <entry key="Stylus" value="5038" />
+          <entry key="Vue.js" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -55,7 +56,7 @@
   <component name="FileEditorManager">
     <splitter split-orientation="horizontal" split-proportion="0.6463142">
       <split-first>
-        <splitter split-orientation="horizontal" split-proportion="0.63812363">
+        <splitter split-orientation="horizontal" split-proportion="0.44378257">
           <split-first>
             <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
               <file pinned="false" current-in-tab="false">
@@ -70,8 +71,8 @@
               <file pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/static/js-modify/index.js">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="432">
-                      <caret line="146" column="13" selection-start-line="146" selection-start-column="13" selection-end-line="146" selection-end-column="13" />
+                    <state relative-caret-position="642">
+                      <caret line="189" selection-start-line="189" selection-end-line="189" />
                       <folding>
                         <element signature="e#0#27#0" expanded="true" />
                       </folding>
@@ -117,7 +118,7 @@
                 <entry file="file://$PROJECT_DIR$/static/css-modify/index.styl">
                   <provider selected="true" editor-type-id="text-editor">
                     <state relative-caret-position="8700">
-                      <caret line="722" column="15" selection-start-line="722" selection-start-column="15" selection-end-line="722" selection-end-column="15" />
+                      <caret line="723" column="15" selection-start-line="723" selection-start-column="15" selection-end-line="723" selection-end-column="15" />
                     </state>
                   </provider>
                 </entry>
@@ -138,11 +139,8 @@
               <file pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/static/css-modify/index.styl">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="339">
-                      <caret line="1002" column="4" selection-start-line="1002" selection-start-column="4" selection-end-line="1002" selection-end-column="4" />
-                      <folding>
-                        <element signature="e#19460#20442#0" />
-                      </folding>
+                    <state relative-caret-position="417">
+                      <caret line="967" column="28" selection-start-line="967" selection-start-column="28" selection-end-line="967" selection-end-column="28" />
                     </state>
                   </provider>
                 </entry>
@@ -166,8 +164,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="582">
-                  <caret line="253" column="33" selection-start-line="253" selection-start-column="33" selection-end-line="253" selection-end-column="33" />
+                <state relative-caret-position="511">
+                  <caret line="224" column="40" selection-start-line="224" selection-start-column="40" selection-end-line="224" selection-end-column="40" />
                   <folding>
                     <element signature="n#style#0;n#p#3;n#div#3;n#div#1;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#span#0;n#p#4;n#div#3;n#div#1;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -182,14 +180,17 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>welcome</find>
       <find>page1</find>
       <find>s</find>
-      <find>swiper-container</find>
       <find>0.1rem</find>
       <find>cd1733</find>
       <find>we</find>
       <find>show</find>
+      <find>join-button</find>
+      <find>font-size</find>
+      <find>input</find>
+      <find>swiper-container</find>
+      <find>welcome</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -202,9 +203,9 @@
         <option value="$PROJECT_DIR$/rollup.config.js" />
         <option value="$PROJECT_DIR$/static/js/areaData_v2.js" />
         <option value="$PROJECT_DIR$/static/js/date.js" />
-        <option value="$PROJECT_DIR$/src/index.html" />
-        <option value="$PROJECT_DIR$/static/css-modify/index.styl" />
         <option value="$PROJECT_DIR$/static/js-modify/index.js" />
+        <option value="$PROJECT_DIR$/static/css-modify/index.styl" />
+        <option value="$PROJECT_DIR$/src/index.html" />
       </list>
     </option>
   </component>
@@ -225,8 +226,8 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="76" />
-    <option name="y" value="23" />
+    <option name="x" value="150" />
+    <option name="y" value="145" />
     <option name="width" value="2404" />
     <option name="height" value="1271" />
   </component>
@@ -399,10 +400,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43794000" />
+    <option name="totallyTimeSpent" value="48905000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="76" y="23" width="2404" height="1271" extended-state="0" />
+    <frame x="150" y="145" width="2404" height="1271" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.12757029" />
@@ -484,26 +485,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.html">
+    <entry file="file://$PROJECT_DIR$/static/js-modify/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="91" selection-start-line="6" selection-start-column="91" selection-end-line="6" selection-end-column="91" />
+        <state relative-caret-position="642">
+          <caret line="189" selection-start-line="189" selection-end-line="189" />
+          <folding>
+            <element signature="e#0#27#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/css-modify/index.styl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="8700">
-          <caret line="722" column="15" selection-start-line="722" selection-start-column="15" selection-end-line="722" selection-end-column="15" />
+          <caret line="723" column="15" selection-start-line="723" selection-start-column="15" selection-end-line="723" selection-end-column="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/js-modify/index.js">
+    <entry file="file://$PROJECT_DIR$/src/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="146" column="13" selection-start-line="146" selection-start-column="13" selection-end-line="146" selection-end-column="13" />
+        <state relative-caret-position="511">
+          <caret line="224" column="40" selection-start-line="224" selection-start-column="40" selection-end-line="224" selection-end-column="40" />
           <folding>
-            <element signature="e#0#27#0" expanded="true" />
+            <element signature="n#style#0;n#p#3;n#div#3;n#div#1;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#p#4;n#div#3;n#div#1;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

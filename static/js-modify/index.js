@@ -21,6 +21,11 @@ const swiper2Show = () => {
     return !$swiper2.hasClass('show') && $swiper2.addClass('show')
 }
 
+const welcomeShow = () => {
+    let $welcome = $('.welcome')
+    return $welcome.hasClass('hide') && $welcome.removeClass('hide')
+}
+
 const welcomeHide = () => {
     let $welcome = $('.welcome')
     return !$welcome.hasClass('hide') && $welcome.addClass('hide')
@@ -29,6 +34,11 @@ const welcomeHide = () => {
 const swiperShow = () => {
     let $swiper = $('.swiper-container')
     return !$swiper.hasClass('show') && $swiper.addClass('show')
+}
+
+const swiperHide = () => {
+    let $swiper = $('.swiper-container')
+    return $swiper.hasClass('show') && $swiper.removeClass('show')
 }
 
 const pageHide = (page) => {
@@ -93,6 +103,11 @@ const errorMessage = (text) => {
     }, 3000)
 }
 
+const setHistory = (url) => {
+    history.pushState({}, '', url)
+}
+
+
 const eventListeners = () => {
     let path1Button = $('.active-button.button1')
     let path2Button = $('.active-button.button2')
@@ -105,22 +120,26 @@ const eventListeners = () => {
         () => {
             welcomeHide()
             swiper1Show()
+            setHistory('/#/1')
         })
     path2Button.on('click',
         () => {
             welcomeHide()
             swiper2Show()
+            setHistory('/#/2')
         })
     page2Logo.on('click',
         () => {
             pageHide('.page2')
             swiperShow()
+            $('.swiper-container').css('height', document.body.clientHeight + 'px')
             pagePopupShow('.page2-popup')
         })
     page3Logo.on('click',
         () => {
             pageHide('.page3')
             swiperShow()
+            $('.swiper-container').css('height', document.body.clientHeight + 'px')
             pagePopupShow('.page3-popup')
         })
     province.on('click',
@@ -131,6 +150,13 @@ const eventListeners = () => {
         () => {
             sexSelect()
         })
+    window.addEventListener("popstate", function(e) {
+        setHistory('/#/')
+        welcomeShow()
+        swiperHide()
+        pageHide('.page2')
+        pageHide('.page3')
+    })
     $('.submit').on('click', () => {
         if (!hasSubmited) {
             let postBody = {
@@ -160,6 +186,9 @@ const eventListeners = () => {
                 }
             })
         }
+    })
+    $('input').on('change', () => {
+        window.scrollTo(0, 0)
     })
 }
 

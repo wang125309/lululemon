@@ -9465,7 +9465,7 @@ const initData = () => {
 // 数据初始化
     function formatYear(nowYear) {
         let arr = [];
-        for (let i = nowYear - 120; i <= nowYear + 5; i++) {
+        for (let i = nowYear - 120; i <= nowYear; i++) {
             arr.push({
                 id: i + '',
                 value: i + '年'
@@ -10060,6 +10060,15 @@ const sexSelect = () => {
         });
 };
 
+let hasSubmited = false;
+
+const errorMessage = (text) => {
+    $('#error-message').html(text);
+    setTimeout(() => {
+        $('#error-message').html('');
+    }, 3000);
+};
+
 const eventListeners = () => {
     let path1Button = $('.active-button.button1');
     let path2Button = $('.active-button.button2');
@@ -10099,9 +10108,34 @@ const eventListeners = () => {
             sexSelect();
         });
     $('.submit').on('click', () => {
-        pageHide('.input-area');
-        pageHide('.submit-button-area');
-        pageShow('.thanks');
+        if (!hasSubmited) {
+            let postBody = {
+                name: $('#name').val(),
+                gender: $('#sexSpan').text().trim() === '男' ? 'F' : 'M',
+                birthday: `${parseInt($('#year').text())}-${parseInt($('#month').text())}-${parseInt($('#date').text())}`,
+                province: $('#provinceSpan').text(),
+                city: $('#citySpan').text(),
+                mobile: parseInt($('#mobile').val()),
+                email: $('#email').val()
+            };
+            if (Number.isNaN(postBody.mobile)) {
+                errorMessage('请输入正确手机号');
+            }
+            if (postBody.name.trim() === '') {
+                errorMessage('请填写您的姓名');
+            }
+
+            $.post('https://lululemon-xmas.curio.im/api/info', postBody, (data) => {
+                if (data.code === 200) {
+                    hasSubmited = true;
+                    pageHide('.input-area');
+                    pageHide('.submit-button-area');
+                    pageShow('.thanks');
+                } else {
+                    errorMessage(data.msg);
+                }
+            });
+        }
     });
 };
 

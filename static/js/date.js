@@ -16,7 +16,7 @@ const initData = () => {
 // 数据初始化
     function formatYear(nowYear) {
         let arr = [];
-        for (let i = nowYear - 120; i <= nowYear + 5; i++) {
+        for (let i = nowYear - 120; i <= nowYear; i++) {
             arr.push({
                 id: i + '',
                 value: i + '年'
